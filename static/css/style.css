@@ -1,0 +1,617 @@
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.15);
+  --border: rgba(255, 255, 255, 0.1);
+  --font-main: "Outfit", sans-serif;
+  --font-code: "JetBrains Mono", monospace;
+}
+body.light-mode {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --accent: #0284c7;
+  --accent-glow: rgba(2, 132, 199, 0.1);
+  --border: rgba(0, 0, 0, 0.1);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  transition: 0.3s ease;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* --- 2. ANIMATION CLASSES --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+
+/* --- 3. NAV --- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 40px;
+  animation: fadeInDown 1s ease-out;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Style Baru untuk Brand Gabungan */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Jarak antara icon dan teks */
+  text-decoration: none; /* Hilangkan garis bawah link */
+}
+
+/* Mengatur ukuran icon di navbar agar tidak kegedean */
+.brand-logo img {
+  height: 40px; /* Ukuran ideal untuk navbar */
+  width: auto;
+  border-radius: 50%; /* Memastikan tetap bulat halus */
+  border: 2px solid var(--accent); /* Opsional: tambah border neon biar makin keren */
+}
+
+/* Mengatur teks MSN */
+.brand-logo span {
+  font-family: var(--font-code);
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.theme-toggle {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.theme-toggle:hover {
+  background: var(--border);
+  color: var(--accent);
+}
+
+/* --- 4. HERO SECTION --- */
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.avatar-container {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 20px;
+  position: relative;
+}
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  background-color: var(--surface);
+  box-shadow: 0 0 20px var(--accent-glow);
+  transition: transform 0.5s ease;
+}
+.avatar-img:hover {
+  transform: scale(1.05);
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.role-badge {
+  display: inline-block;
+  background: var(--accent-glow);
+  color: var(--accent);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-family: var(--font-code);
+  margin-bottom: 20px;
+  border: 1px solid var(--accent);
+  min-width: 250px;
+}
+.cursor {
+  display: inline-block;
+  width: 8px;
+  background-color: var(--accent);
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.bio-text {
+  color: var(--text-secondary);
+  max-width: 750px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+  font-weight: 600;
+}
+body:not(.light-mode) .btn-primary {
+  color: #0f172a;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -10px var(--accent);
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+.btn-outline:hover {
+  border-color: var(--accent);
+  background: var(--surface);
+  transform: translateY(-3px);
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.5rem;
+}
+.social-icons a {
+  color: var(--text-secondary);
+  transition: 0.3s;
+}
+.social-icons a:hover {
+  color: var(--accent);
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* --- 5. SECTIONS --- */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  margin-top: 70px;
+}
+.section-header h2 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+.line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.skills-grid,
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.skill-card,
+.edu-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.3s;
+}
+.skill-card:hover,
+.edu-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+}
+.skill-icon {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.skill-title,
+.edu-info h3 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+.edu-info h3 {
+  font-size: 1.15rem;
+}
+.skill-list,
+.job-desc {
+  list-style: none;
+  padding-left: 0;
+}
+.skill-list li,
+.job-desc li {
+  font-family: var(--font-code);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+}
+.skill-list li::before {
+  content: "▹";
+  color: var(--accent);
+  margin-right: 8px;
+}
+.edu-info p {
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.edu-year {
+  font-family: var(--font-code);
+  background: var(--accent-glow);
+  color: var(--accent);
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* --- 6. EXP CARD FIX --- */
+.exp-card {
+  background: var(--surface);
+  border-left: 4px solid var(--accent); /* Aksen garis kiri */
+  border-radius: 4px 12px 12px 4px;
+  padding: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+.exp-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 15px;
+}
+
+.exp-role {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.exp-company {
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-top: 4px;
+}
+.exp-date {
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+
+.exp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.exp-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 15px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.exp-list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+.exp-list li strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* --- 7. PROJECTS --- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.project-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--accent);
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.4);
+}
+.project-thumb {
+  width: 100%;
+  height: 180px;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  opacity: 0.9;
+}
+.project-card:hover .project-thumb img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.project-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+.project-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+.project-details {
+  margin-bottom: 20px;
+  padding-left: 0;
+  list-style: none;
+  flex-grow: 1;
+}
+.project-details li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 15px;
+  line-height: 1.4;
+}
+.project-details li::before {
+  content: "▹";
+  color: var(--accent);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+.tag {
+  font-size: 0.75rem;
+  font-family: var(--font-code);
+  color: var(--accent);
+  background: var(--accent-glow);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* --- 8. BACK TO TOP --- */
+/* --- 8. BACK TO TOP (POSISI DI ATAS AI) --- */
+/* --- 8. BACK TO TOP (Versi Gelap -> Hover Biru) --- */
+/* --- 8. BACK TO TOP (VERSI SELALU BIRU) --- */
+#backToTop {
+  position: fixed;
+  bottom: 160px;
+  right: 48px;
+
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+
+  /* GANTI BAGIAN INI: */
+  background: var(--accent); /* Langsung biru neon */
+  color: white; /* Panah warna putih */
+  border: none; /* Hapus garis pinggir */
+
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 9000;
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Efek saat disorot: Sedikit naik & transparan dikit */
+#backToTop:hover {
+  transform: translateY(-5px);
+  opacity: 0.8;
+}
+body:not(.light-mode) #backToTop {
+  color: #0f172a;
+}
+
+footer {
+  text-align: center;
+  padding: 60px 0 30px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .action-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+  }
+  .project-thumb {
+    height: 200px;
+  }
+  .edu-info {
+    max-width: 100%;
+  }
+  .container {
+    padding: 20px;
+  }
+}
+/* --- MOBILE TEXT OVERFLOW FIX --- */
+/* Memaksa teks deskripsi dalam list untuk turun baris di layar kecil */
+.skill-list li,
+.job-desc li,
+.project-details li,
+.exp-list li {
+  /* Mengizinkan teks untuk wrap (turun baris) secara normal */
+  white-space: normal !important;
+
+  /* Memastikan kata yang sangat panjang (misal URL) dipatahkan agar tidak keluar kotak */
+  word-break: break-word;
+  overflow-wrap: break-word;
+
+  /* (Opsional) Merapikan posisi ikon bullet point agar sejajar dengan baris pertama teks */
+  align-items: flex-start;
+}
+
+/* Menyesuaikan posisi ikon bullet point sedikit ke bawah jika teksnya multi-line */
+.skill-list li::before,
+.job-desc li::before,
+.project-details li::before,
+.exp-list li::before {
+  margin-top: 5px; /* Sesuaikan angka ini jika kurang pas */
+}
+/* --- ANIMASI BARU: ROBOT BERNAPAS & BUBBLE MUNCUL --- */
+
+/* 1. Animasi Robot "Bernapas" (Pulsing) */
+@keyframes robotBreathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08); /* Membesar sedikit */
+  }
+}
+
+/* Terapkan ke ikon robot di dalam tombol */
+#chat-toggle i {
+  animation: robotBreathe 2.5s ease-in-out infinite;
+}
+
+/* 2. Animasi Bubble Muncul (Pop Up) */
+/* Kita ubah animasi floatBubble yang lama jadi ini */
+@keyframes popUpBubble {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8); /* Mulai dari bawah dan kecil */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1); /* Posisi normal */
+  }
+}

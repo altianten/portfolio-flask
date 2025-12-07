@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-V7SKLSRRHT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-V7SKLSRRHT");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ian | Data Scientist</title>
+    <meta name="description" content="Portfolio of ian - Data Scientist." />
+    <meta
+      property="og:image"
+      content="https://ui-avatars.com/api/?name=Muhammad+Septian&background=0f172a&color=38bdf8&size=512"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='img/favicon.png') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <a href="/" class="brand-logo">
+          <img
+            src="{{ url_for('static', filename='img/favicon.png') }}"
+            alt="MSN Logo"
+          />
+          <span>&lt;MSN /&gt;</span>
+        </a>
+
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Toggle Theme"
+        >
+          <i class="fas fa-sun"></i>
+        </button>
+      </nav>
+
+      <section class="hero reveal">
+        <div class="avatar-container">
+          <img
+            src="{{ url_for('static', filename='img/Profile-Photo.png') }}"
+            alt="Muhammad Septian Profile"
+            class="avatar-img"
+          />
+        </div>
+
+        <h1>ian</h1>
+
+        <div class="role-badge">
+          <span id="typewriter-text"></span><span class="cursor">&nbsp;</span>
+        </div>
+
+        <p class="bio-text">
+          Results-driven Data Scientist specializing in
+          <strong>Predictive Modeling</strong>, <strong>NLP</strong>, and
+          <strong>Business Intelligence</strong>. I transform complex datasets
+          into actionable strategic insights.
+        </p>
+
+        <div class="action-buttons">
+          <a
+            href="https://drive.google.com/file/d/1-DCA6I7X7Db9Nn_BFqJj0HtCyL90LAu_/view?usp=sharing"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            <i class="fas fa-file-alt"></i> Download CV
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=muhammadsian00@gmail.com"
+            target="_blank"
+            class="btn btn-outline"
+          >
+            <i class="fas fa-envelope"></i> Contact Me
+          </a>
+        </div>
+
+        <div class="social-icons">
+          <a
+            href="https://www.linkedin.com/in/muhammad-septian-nugroho"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/altianten" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://wa.me/6282325279005" target="_blank"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+        </div>
+      </section>
+
+      <div class="section-header reveal">
+        <h2>Core Competencies</h2>
+        <div class="line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal reveal-delay-1">
+          <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3 class="skill-title">Advanced Analytics</h3>
+          <ul class="skill-list">
+            <li>Python (Pandas, NumPy)</li>
+            <li>Predictive Modeling</li>
+            <li>Feature Engineering</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal reveal-delay-2">
+          <div class="skill-icon"><i class="fas fa-brain"></i></div>
+          <h3 class="skill-title">Machine Learning</h3>
+          <ul class="skill-list">
+            <li>Ensemble (XGBoost/CatBoost)</li>
+            <li>NLP & Sentiment Analysis</li>
+            <li>Model Optimization (Optuna)</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal reveal-delay-1">
+          <div class="skill-icon"><i class="fas fa-database"></i></div>
+          <h3 class="skill-title">Data Engineering</h3>
+          <ul class="skill-list">
+            <li>SQL (MySQL, Oracle)</li>
+            <li>ETL Pipeline Design</li>
+            <li>Data Cleaning & Scaling</li>
+            <li>Handling Imbalanced Data</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal reveal-delay-1">
+          <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+          <h3 class="skill-title">Visualization</h3>
+          <ul class="skill-list">
+            <li>Power BI & Looker Studio</li>
+            <li>Streamlit Web Apps</li>
+            <li>Data Storytelling</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section-header reveal">
+        <h2>Professional Experience</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Data Analyst Intern</div>
+            <div class="exp-company">
+              PT Zona Akselerasi Pendidikan (Zenius Education)
+            </div>
+          </div>
+          <div class="exp-date">Aug 2022 - Dec 2022</div>
+        </div>
+        <ul class="exp-list">
+          <li>
+            <strong>Strategic Optimization:</strong> Achieved model accuracy
+            target of <strong>85%</strong>.
+          </li>
+          <li>
+            <strong>Advanced Data Engineering:</strong> Executed rigorous
+            feature engineering pipelines.
+          </li>
+          <li>
+            <strong>Predictive Modeling:</strong> Developed high-performance
+            algorithms (Logistic Regression, Random Forest).
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-header reveal">
+        <h2>Featured Projects</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="project-grid">
+        {% for project in projects %}
+        <div class="project-card reveal">
+          <div class="project-thumb">
+            {% if 'http' in project.image %}
+            <img src="{{ project.image }}" alt="{{ project.title }}" />
+            {% else %}
+            <img
+              src="{{ url_for('static', filename='img/' + project.image) }}"
+              alt="{{ project.title }}"
+            />
+            {% endif %}
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">{{ project.title }}</h3>
+            </div>
+            <p class="project-desc">{{ project.desc | safe }}</p>
+            <ul class="project-details">
+              {% for detail in project.details %}
+              <li>{{ detail }}</li>
+              {% endfor %}
+            </ul>
+            <div class="project-tech">
+              {% for tag in project.tags %}
+              <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="section-header reveal">
+        <h2>Education & Credentials</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="edu-card reveal" style="margin-bottom: 50px">
+        <div class="edu-info">
+          <h3>Bachelor of Informatics Engineering</h3>
+          <p>Satya Wacana Christian University</p>
+          <span>GPA: <strong>3.77 / 4.00</strong></span>
+        </div>
+        <div class="edu-year">Graduated</div>
+      </div>
+
+      <h3
+        class="reveal"
+        style="
+          margin-bottom: 25px;
+          color: var(--text-primary);
+          font-size: 1.2rem;
+        "
+      >
+        <i
+          class="fas fa-certificate"
+          style="color: var(--accent); margin-right: 10px"
+        ></i>
+        Professional Certifications
+      </h3>
+
+      <div class="certs-grid">
+        {% for cert in certs %}
+        <div class="edu-card reveal">
+          <div class="edu-info">
+            <h3>{{ cert.title }}</h3>
+            <p>{{ cert.issuer }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="section-header reveal" style="margin-top: 50px">
+        <h2>Professional Development</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="certs-grid">
+        {% for item in profdev %}
+        <div class="edu-card reveal">
+          <div class="edu-info">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.organizer }}</p>
+
+            <div style="margin-top: 10px">
+              <span class="edu-year">{{ item.year }}</span>
+            </div>
+
+            {% if item.desc %}
+            <ul class="job-desc" style="margin-top: 15px">
+              <li>{{ item.desc | safe }}</li>
+            </ul>
+            {% endif %} {% if item.tags %}
+            <div class="project-tech" style="margin-top: 15px">
+              {% for tag in item.tags %}
+              <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <footer class="reveal">
+        <p>&copy; 2025 Ian's Portfolio. <br />Designed for Impact.</p>
+
+        <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7">
+          <span id="busuanzi_container_site_uv">
+            <i class="fas fa-user" style="margin-right: 5px"></i>
+            Total Pengunjung:
+            <span
+              id="busuanzi_value_site_uv"
+              style="font-weight: bold; color: var(--accent)"
+            ></span>
+          </span>
+          <span style="margin: 0 10px">|</span>
+          <span id="busuanzi_container_page_pv">
+            <i class="fas fa-eye" style="margin-right: 5px"></i>
+            Dilihat:
+            <span
+              id="busuanzi_value_page_pv"
+              style="font-weight: bold; color: var(--accent)"
+            ></span>
+            kali
+          </span>
+        </div>
+      </footer>
+
+      <button id="backToTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+    <div
+      id="chat-widget"
+      style="
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9999;
+        font-family: var(--font-main);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      "
+    >
+      <div
+        id="chat-bubble"
+        onclick="toggleChat()"
+        style="
+          display: none; /* <--- PENTING: Sembunyi dulu biar munculnya kaget */
+          background: #ffffff;
+          color: #0f172a;
+          padding: 8px 15px;
+          border-radius: 20px 20px 0 20px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          margin-bottom: 10px;
+          cursor: pointer;
+          font-size: 0.9rem;
+          font-weight: bold;
+          position: relative;
+        "
+      ></div>
+
+<button id="chat-toggle" onclick="toggleChat()" 
+        style="width: 85px; height: 85px; 
+        border-radius: 50%;         /* 1. Bentuk wadahnya bulat */
+        overflow: hidden;           /* 2. PENTING: Gunting gambar yang keluar dari lingkaran */
+        background: #ffffff;        /* 3. Warna dasar putih (jaga-jaga) */
+        border: 2px solid var(--accent); /* 4. (Opsional) Ring warna biru biar makin pop-up */
+        
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Bayangan biar melayang */
+        cursor: pointer; transition: 0.3s; 
+        padding: 0; margin: 0; border: none;
+        display: flex; align-items: center; justify-content: center;">
+        
+        <img src="{{ url_for('static', filename='img/Chibi-AI.gif') }}" 
+             alt="AI Ian" 
+             style="width: 100%; height: 100%; object-fit: cover;">
+             
+      </button>
+
+      <div
+        id="chat-box"
+        style="
+          display: none;
+          position: absolute;
+          bottom: 80px;
+          right: 0;
+          width: 350px;
+          height: 450px;
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          flex-direction: column;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        "
+      >
+        <div
+          style="
+            background: var(--surface);
+            padding: 15px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          "
+        >
+          <div
+            style="
+              width: 10px;
+              height: 10px;
+              background: #22c55e;
+              border-radius: 50%;
+            "
+          ></div>
+          <h4 style="margin: 0; font-size: 1rem">Tanya Assistant Ian</h4>
+          <span
+            onclick="toggleChat()"
+            style="
+              margin-left: auto;
+              cursor: pointer;
+              color: var(--text-secondary);
+            "
+            >&times;</span
+          >
+        </div>
+
+        <div
+          id="chat-messages"
+          style="flex: 1; padding: 15px; overflow-y: auto; font-size: 0.9rem"
+        >
+          <div style="margin-bottom: 10px; text-align: left">
+            <span
+              style="
+                background: var(--border);
+                padding: 8px 12px;
+                border-radius: 10px 10px 10px 0;
+                display: inline-block;
+              "
+            >
+              Halo! Saya AI Assistant Ian. Ada yang bisa saya bantu? 🤖
+            </span>
+          </div>
+        </div>
+
+        <div
+          style="
+            padding: 10px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            gap: 5px;
+          "
+        >
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Tanya skill, project..."
+            onkeypress="handleEnter(event)"
+            style="
+              flex: 1;
+              padding: 10px;
+              border-radius: 8px;
+              border: 1px solid var(--border);
+              background: var(--bg);
+              color: var(--text-primary);
+              outline: none;
+            "
+          />
+          <button
+            onclick="sendMessage()"
+            style="
+              background: var(--accent);
+              border: none;
+              color: white;
+              padding: 0 15px;
+              border-radius: 8px;
+              cursor: pointer;
+            "
+          >
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script
+      async
+      src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+    ></script>
+  </body>
+</html>
