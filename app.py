@@ -6,7 +6,7 @@ app = Flask(__name__)
 # --- 2. KONFIGURASI AI ---
 # GANTI 'PASTE_API_KEY_DISINI' dengan API Key yang kamu dapat tadi
 # Nanti saat deploy ke Render, kita pakai cara yang lebih aman (Environment Variable)
-MY_API_KEY = "AIzaSyBGPVpS3DVIg7fxCNmxHRbKO-q7TZuYYxc"
+MY_API_KEY = "YOUR API KEY"
 genai.configure(api_key=MY_API_KEY)
 
 # --- 3. CONTEKAN UNTUK AI (DATA DIRIMU) ---
